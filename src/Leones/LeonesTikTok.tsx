@@ -299,15 +299,8 @@ export const LeonesTikTok: React.FC = () => {
       />
       <Caption
         from={195}
-        to={260}
-        before="…y se va como"
-        highlight="todo un rey"
-        after="👑"
-      />
-      <Caption
-        from={275}
         to={415}
-        before="Mientras tanto, uno se va a"
+        before="…y se va tranquilo a"
         highlight="beber agua"
         after="💧"
       />
