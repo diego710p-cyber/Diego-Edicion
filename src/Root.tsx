@@ -3,6 +3,11 @@ import { Composition, Folder } from "remotion";
 import { HelloWorld } from "./HelloWorld";
 import { Logo } from "./HelloWorld/Logo";
 import { Title } from "./HelloWorld/Title";
+import {
+  LEONES_DURATION,
+  LEONES_FPS,
+  LeonesTikTok,
+} from "./Leones/LeonesTikTok";
 
 // Each <Composition> is an entry in the sidebar!
 
@@ -51,7 +56,15 @@ export const RemotionRoot: React.FC = () => {
           titleColor: "#000000",
         }}
       />
-
+      <Composition
+        // TikTok edit of public/Leones e hijos.mp4 (1080x1920, 9:16)
+        id="LeonesTikTok"
+        component={LeonesTikTok}
+        durationInFrames={LEONES_DURATION}
+        fps={LEONES_FPS}
+        width={1080}
+        height={1920}
+      />
     </>
   );
 };
