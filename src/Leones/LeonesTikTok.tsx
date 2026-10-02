@@ -149,12 +149,12 @@ const Hook: React.FC<{ from: number; to: number }> = ({ from, to }) => {
           transform: `scale(${enter})`,
         }}
       >
-        🦁 SAFARI
+        🦁 SAFARI REAL
       </div>
       <div
         style={{
           marginTop: 22,
-          fontFamily: anton,
+          fontFamily: `${anton}, ${EMOJI}`,
           fontSize: 150,
           lineHeight: 1,
           color: "white",
@@ -163,7 +163,9 @@ const Hook: React.FC<{ from: number; to: number }> = ({ from, to }) => {
           transform: `scale(${0.6 + 0.4 * enter}) rotate(${(1 - enter) * -6}deg)`,
         }}
       >
-        LEONES <span style={{ color: GOLD }}>E HIJOS</span>
+        ASÍ DE CERCA
+        <br />
+        <span style={{ color: GOLD }}>DEL REY 👑</span>
       </div>
       <div
         style={{
@@ -180,7 +182,7 @@ const Hook: React.FC<{ from: number; to: number }> = ({ from, to }) => {
           transform: `translateY(${(1 - subIn) * 30}px)`,
         }}
       >
-        Una familia de leones a metros de nosotros 😳
+        Espera al <span style={{ color: GOLD }}>segundo 14</span> 👀
       </div>
     </AbsoluteFill>
   );
