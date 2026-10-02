@@ -307,9 +307,9 @@ export const LeonesTikTok: React.FC = () => {
       <Caption
         from={275}
         to={415}
-        before="Hora de"
-        highlight="descansar a la sombra"
-        after="😴"
+        before="Mientras tanto, uno se va a"
+        highlight="beber agua"
+        after="💧"
       />
       <Caption
         from={425}
