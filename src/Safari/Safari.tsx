@@ -78,37 +78,11 @@ const Footage: React.FC = () => {
           width: "100%",
           height: "100%",
           objectFit: "cover",
-          filter: "contrast(1.08) saturate(1.18) brightness(1.02)",
         }}
       />
     </AbsoluteFill>
   );
 };
-
-const Grade: React.FC = () => (
-  <>
-    {/* warm golden-hour tint */}
-    <AbsoluteFill
-      style={{
-        background: "linear-gradient(180deg, rgba(255,170,60,0.10), rgba(255,120,30,0.06))",
-        mixBlendMode: "soft-light",
-      }}
-    />
-    {/* vignette */}
-    <AbsoluteFill
-      style={{
-        background:
-          "radial-gradient(ellipse at center, rgba(0,0,0,0) 55%, rgba(0,0,0,0.55) 100%)",
-      }}
-    />
-    {/* top shade so the text always reads */}
-    <AbsoluteFill
-      style={{
-        background: "linear-gradient(180deg, rgba(0,0,0,0.45) 0%, rgba(0,0,0,0) 30%)",
-      }}
-    />
-  </>
-);
 
 const CutFlash: React.FC = () => {
   const frame = useCurrentFrame();
@@ -238,12 +212,6 @@ const Outro: React.FC = () => {
 
   return (
     <AbsoluteFill style={{ justifyContent: "center", alignItems: "center", top: -120 }}>
-      <AbsoluteFill
-        style={{
-          backgroundColor: "black",
-          opacity: interpolate(frame, [0, 25], [0, 0.45], { extrapolateRight: "clamp" }),
-        }}
-      />
       <div
         style={{
           fontFamily: anton,
@@ -315,7 +283,6 @@ export const Safari: React.FC = () => {
   return (
     <AbsoluteFill style={{ backgroundColor: "black", overflow: "hidden" }}>
       <Footage />
-      <Grade />
 
       {SHOTS.slice(1).map((s) => (
         <Sequence key={s.from} from={s.from} durationInFrames={8} layout="none">
