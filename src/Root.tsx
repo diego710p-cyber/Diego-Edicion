@@ -3,6 +3,7 @@ import { Composition, Folder } from "remotion";
 import { HelloWorld } from "./HelloWorld";
 import { Logo } from "./HelloWorld/Logo";
 import { Title } from "./HelloWorld/Title";
+import { Safari, SAFARI_DURATION } from "./Safari/Safari";
 
 // Each <Composition> is an entry in the sidebar!
 
@@ -51,7 +52,15 @@ export const RemotionRoot: React.FC = () => {
           titleColor: "#000000",
         }}
       />
-
+      <Composition
+        // TikTok edit of public/IMG_8037.MOV: npx remotion render Safari out/safari-tiktok.mp4
+        id="Safari"
+        component={Safari}
+        durationInFrames={SAFARI_DURATION}
+        fps={30}
+        width={1080}
+        height={1920}
+      />
     </>
   );
 };
